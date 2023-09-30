@@ -18,17 +18,16 @@ public class Account {
 
     private String agency;
 
-    @Column( precision = 13, scale = 2)
+    @Column(precision = 13, scale = 2)
     private BigDecimal balance;
 
-    @Column(name = "additional_limit", scale = 13, precision = 2, nullable = false)
+    @Column(name = "additional_limit", precision = 13, scale = 2, nullable = false)
     private BigDecimal limit;
 
     public Account() {
     }
 
-    public Account(Long id, String number, String agency, BigDecimal balance, BigDecimal limit) {
-        this.id = id;
+    public Account(String number, String agency, BigDecimal balance, BigDecimal limit) {
         this.number = number;
         this.agency = agency;
         this.balance = balance;
@@ -39,7 +38,7 @@ public class Account {
         return id;
     }
 
-    public void setId(Long id) {
+    private void setId(Long id) {
         this.id = id;
     }
 

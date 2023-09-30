@@ -8,4 +8,5 @@ import java.util.Objects;
 @Entity
 @Table(name = "tb_news")
 public class News extends BaseItem {
+
 }
